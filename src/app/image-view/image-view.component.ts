@@ -8,15 +8,15 @@ import { FoodService } from '../food.service';
   styleUrls: ['./image-view.component.css']
 })
 export class ImageViewComponent implements OnInit {
-  private imageId:any;
-  private imageInfo:any;
-  private imageUrl:any;
-  private reviewerName:string;
-  private review:string;
-  private radioValue:any;
-  private userReviews:any[]=[];
+  public imageId:any;
+  public imageInfo:any;
+  public imageUrl:any;
+  public reviewerName:string;
+  public review:string;
+  public radioValue:any;
+  public userReviews:any[]=[];
 
-  private radioValues=[1,2,3,4,5,6,7,8,9,10];
+  public radioValues=[1,2,3,4,5,6,7,8,9,10];
 
   constructor(private route:ActivatedRoute,private foodService:FoodService,private router:Router) { }
 
@@ -57,7 +57,7 @@ export class ImageViewComponent implements OnInit {
   }
 
   // submitting form
-  private submitForm()
+  public submitForm()
   {
     if(this.radioValue && this.reviewerName && this.review)
     {

@@ -9,14 +9,14 @@ import {Router} from '@angular/router'
 })
 export class HomeComponent implements OnInit {
 
-  private initialPageNo = 1;
+  public initialPageNo = 1;
   public photos: any[]=[];
-  private totalPage: number;
-  private disableNextBtn:boolean=false;
+  public totalPage: number;
+  public disableNextBtn:boolean=false;
 
-  private radios = [1,2,3,4,5,6,7,8,9,10];
+  public radios = [1,2,3,4,5,6,7,8,9,10];
 
-  private userReviews:any[]=[];
+  public userReviews:any[]=[];
 
   constructor(private foodService: FoodService,
     private router:Router) { }
@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
   }
 
   // viewing previous page
-  private viewPreviousPage() {
+  public viewPreviousPage() {
     // console.log('prec');
     this.initialPageNo--;
     this.getImages();
@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
   }
 
   //viewing next page
-  private viewNextPage() {
+  public viewNextPage() {
     // console.log(this.totalPage)
     if (this.initialPageNo < this.totalPage) {
       // console.log('next')
@@ -126,7 +126,7 @@ export class HomeComponent implements OnInit {
   }
 
   // navigation to image view
-  private navigateToImage(photo)
+  public navigateToImage(photo)
   {
     // console.log('inside navigate')
     // console.log(photo);
@@ -140,7 +140,7 @@ export class HomeComponent implements OnInit {
   //   console.log('ng after content checked')
   // }
 
-  private resetReviews()
+  public resetReviews()
   {
     if(this.userReviews)
     {
